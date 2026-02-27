@@ -1,0 +1,42 @@
+# Trading Bot Configuration
+
+## Market & Data
+MARKET: "NSE"  # NSE or BSE
+DATA_SOURCE: "yfinance"  # yfinance (free) or zerodha (paid)
+LIVE_DATA_DELAY_MINUTES: 15  # yfinance has 15-20 min delay
+
+## Trading Hours (IST)
+MARKET_START_HOUR: 9
+MARKET_START_MINUTE: 15
+MARKET_END_HOUR: 15
+MARKET_END_MINUTE: 20  # Force exit
+NO_TRADE_AFTER_HOUR: 15
+NO_TRADE_AFTER_MINUTE: 0
+
+## Capital & Risk
+STARTING_CAPITAL: 500  # INR
+MAX_POSITION_SIZE: 500  # Use full capital per trade (RISKY)
+MAX_SIMULTANEOUS_TRADES: 1  # One at a time for now
+STOP_LOSS_PERCENT: 5  # Wider stop loss
+TAKE_PROFIT_PERCENT: 10  # Higher target
+MAX_RISK_PER_TRADE: 50  # Max ₹50 per trade
+DAILY_LOSS_LIMIT: 100  # Stop at ₹100 loss (20%)
+
+## Stock Selection Criteria
+MIN_PRICE: 20  # No penny stocks
+MIN_DAILY_VOLUME: 500000  # 50 Cr turnover
+MIN_VOLUME_MULTIPLIER: 1.2  # Very low for more signals
+
+## Bot Settings
+SCAN_INTERVAL_MINUTES: 3  # Scan every 3-5 minutes
+MAX_STOCKS_TO_SCAN: 50  # Expanded to 50 stocks
+ENABLE_TELEGRAM_ALERTS: true
+PAPER_TRADING: true  # Paper trading mode - no real trades
+
+## Telegram Alerts (fill in your details)
+TELEGRAM_BOT_TOKEN: "8127398516:AAEGPVkwPWEm3PVDakFOudMu4nfVbHQ42TY"
+TELEGRAM_CHAT_ID: "5964429034"
+
+## Files
+LOG_FILE: "logs/trading.log"
+TRADES_FILE: "learning/trades.md"
