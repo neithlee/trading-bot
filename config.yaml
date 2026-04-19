@@ -1,4 +1,4 @@
-# Trading Bot Configuration
+# Trading Bot Configuration v2.0
 
 ## Market & Data
 MARKET: "NSE"  # NSE or BSE
@@ -15,27 +15,48 @@ NO_TRADE_AFTER_MINUTE: 0
 
 ## Capital & Risk
 STARTING_CAPITAL: 500  # INR
-MAX_POSITION_SIZE: 500  # Use full capital per trade (RISKY)
-MAX_SIMULTANEOUS_TRADES: 1  # One at a time for now
-STOP_LOSS_PERCENT: 5  # Wider stop loss
-TAKE_PROFIT_PERCENT: 10  # Higher target
+MAX_POSITION_SIZE: 50  # Max ₹50 per trade (safer)
+MAX_SIMULTANEOUS_TRADES: 5  # Conservative - 5 max positions
+STOP_LOSS_PERCENT: 3  # Fallback (if ATR unavailable)
+TAKE_PROFIT_PERCENT: 15  # Fallback (if ATR unavailable)
 MAX_RISK_PER_TRADE: 50  # Max ₹50 per trade
 DAILY_LOSS_LIMIT: 100  # Stop at ₹100 loss (20%)
 
-## Stock Selection Criteria
-MIN_PRICE: 20  # No penny stocks
-MIN_DAILY_VOLUME: 500000  # 50 Cr turnover
-MIN_VOLUME_MULTIPLIER: 1.2  # Very low for more signals
+## Stock Selection Criteria (v2.0 Updated)
+MIN_PRICE: 10  # Minimum ₹10
+MIN_DAILY_VOLUME: 200000  # 200k minimum
+MIN_VOLUME_MULTIPLIER: 1.5  # Volume must be 1.5x average (2.0x for strong)
+STRONG_VOLUME_MULTIPLIER: 2.0  # Strong signal threshold
+
+## Entry Criteria (v2.0)
+ENABLE_EMA_FILTER: true  # Price must be above EMA20
+ENABLE_VWAP_FILTER: true  # Price must be above VWAP
+ENABLE_RSI_FILTER: true  # RSI must be < 70
+ENABLE_CANDLE_FILTER: true  # Must be bullish candle (close > open)
+
+## ATR Settings (v2.0)
+ATR_PERIOD: 14  # Standard ATR period
+ATR_SL_MULTIPLIER: 1.5  # Stop loss = entry - 1.5 * ATR
+ATR_TP_MULTIPLIER: 4.5  # Take profit = entry + 4.5 * ATR
+
+## Trailing Stop (v2.0)
+TRAIL_AT_7_PERCENT: 0.005  # Move SL to breakeven + 0.5%
+TRAIL_AT_11_PERCENT: 0.05  # Move SL to +5%
+TRAIL_AT_15_PERCENT: 0.10  # Move SL to +10%
 
 ## Bot Settings
 SCAN_INTERVAL_MINUTES: 3  # Scan every 3-5 minutes
-MAX_STOCKS_TO_SCAN: 50  # Expanded to 50 stocks
+MAX_STOCKS_TO_SCAN: 20  # Scans top 20 stocks
 ENABLE_TELEGRAM_ALERTS: true
 PAPER_TRADING: true  # Paper trading mode - no real trades
 
-## Telegram Alerts (fill in your details)
+## Telegram Alerts
 TELEGRAM_BOT_TOKEN: "8127398516:AAEGPVkwPWEm3PVDakFOudMu4nfVbHQ42TY"
 TELEGRAM_CHAT_ID: "5964429034"
+
+## GoalTracker Settings
+ENABLE_GOAL_TRACKER: true  # Enable savings goal tracking
+PROFIT_TRANSFER_PERCENT: 30  # 30% of profits go to savings
 
 ## Files
 LOG_FILE: "logs/trading.log"
