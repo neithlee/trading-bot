@@ -1,22 +1,16 @@
-2026-04-19 08:39:48,579 - INFO - 💰 GoalTracker initialized
-2026-04-19 08:39:48,580 - INFO - 📂 Loaded 5 open positions from state
-2026-04-19 08:39:48,580 - INFO - 🚀 Trading Bot v2.0 initialized
-2026-04-19 08:39:48,581 - INFO -    Capital: ₹250.0
-2026-04-19 08:39:48,581 - INFO -    Max Position: ₹50
-2026-04-19 08:39:48,581 - INFO -    Data: yfinance
-2026-04-19 08:39:48,581 - INFO -    Paper Trading: True
-2026-04-19 08:39:48,582 - INFO -    Volume Threshold: 1.5x
-2026-04-19 08:39:48,582 - INFO - 🤖 Bot v2.0 starting...
-2026-04-19 08:39:48,582 - INFO - ==================================================
-2026-04-19 08:39:49,475 - INFO - 🌙 Market closed. Sleeping...
-2026-04-19 08:40:03,971 - INFO - 📱 Telegram alert sent
-2026-04-19 08:45:03,974 - INFO - ==================================================
-2026-04-19 08:45:03,975 - INFO - 🌙 Market closed. Sleeping...
-2026-04-19 08:50:03,976 - INFO - ==================================================
-2026-04-19 08:50:03,976 - INFO - 🌙 Market closed. Sleeping...
-2026-04-19 08:55:03,977 - INFO - ==================================================
-2026-04-19 08:55:03,978 - INFO - 🌙 Market closed. Sleeping...
-2026-04-19 09:00:03,978 - INFO - ==================================================
-2026-04-19 09:00:03,979 - INFO - 🌙 Market closed. Sleeping...
-2026-04-19 09:05:03,983 - INFO - ==================================================
-2026-04-19 09:05:03,986 - INFO - 🌙 Market closed. Sleeping...
+2026-04-20 04:53:52,580 - INFO - 💰 GoalTracker initialized
+2026-04-20 04:53:52,581 - INFO - 📂 Loaded 4 open positions from state
+2026-04-20 04:53:52,581 - INFO - 🚀 Trading Bot v2.0 initialized
+2026-04-20 04:53:52,581 - INFO -    Capital: ₹278.25
+2026-04-20 04:53:52,582 - INFO -    Max Position: ₹50
+2026-04-20 04:53:52,582 - INFO -    Data: yfinance
+2026-04-20 04:53:52,582 - INFO -    Paper Trading: True
+2026-04-20 04:53:52,582 - INFO -    Volume Threshold: 1.5x
+2026-04-20 04:53:52,583 - INFO - 🤖 Bot v2.0 starting...
+2026-04-20 04:53:52,583 - INFO - ==================================================
+2026-04-20 04:53:52,667 - INFO - 🕐 IST Time: 10:23:52 | Market: OPEN
+2026-04-20 04:53:52,667 - INFO - Starting market scan...
+2026-04-20 04:53:52,668 - INFO - 🔍 Scanning market...
+2026-04-20 04:53:52,668 - INFO - 📊 Aggression multiplier: 1.0x
+2026-04-20 04:54:01,001 - INFO - Scan complete. Found: 0
+2026-04-20 04:54:02,181 - INFO - 📊 Open Positions: 4 | Capital: ₹278.25 | Daily P/L: ₹-1.11

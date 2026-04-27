@@ -1,63 +1,42 @@
-# Trading Bot Configuration v2.0
+# Trading Bot Configuration v3.0 - COMPOUND MODE
 
 ## Market & Data
-MARKET: "NSE"  # NSE or BSE
-DATA_SOURCE: "yfinance"  # yfinance (free) or zerodha (paid)
-LIVE_DATA_DELAY_MINUTES: 15  # yfinance has 15-20 min delay
+MARKET: "NSE"
+DATA_SOURCE: "yfinance"
+LIVE_DATA_DELAY_MINUTES: 15
 
 ## Trading Hours (IST)
 MARKET_START_HOUR: 9
 MARKET_START_MINUTE: 15
 MARKET_END_HOUR: 15
-MARKET_END_MINUTE: 20  # Force exit
-NO_TRADE_AFTER_HOUR: 15
-NO_TRADE_AFTER_MINUTE: 0
+MARKET_END_MINUTE: 20
+NO_TRADE_AFTER_HOUR: 14
+NO_TRADE_AFTER_MINUTE: 30
 
 ## Capital & Risk
-STARTING_CAPITAL: 500  # INR
-MAX_POSITION_SIZE: 50  # Max ₹50 per trade (safer)
-MAX_SIMULTANEOUS_TRADES: 5  # Conservative - 5 max positions
-STOP_LOSS_PERCENT: 3  # Fallback (if ATR unavailable)
-TAKE_PROFIT_PERCENT: 15  # Fallback (if ATR unavailable)
-MAX_RISK_PER_TRADE: 50  # Max ₹50 per trade
-DAILY_LOSS_LIMIT: 100  # Stop at ₹100 loss (20%)
+STARTING_CAPITAL: 500
+MAX_POSITION_SIZE: 100  # 20% of capital, max ₹100 until ₹2000
+MAX_SIMULTANEOUS_TRADES: 5
+STOP_LOSS_PERCENT: 3
+TAKE_PROFIT_PERCENT: 10
+DAILY_LOSS_LIMIT: 150  # Slightly higher for aggressive mode
 
-## Stock Selection Criteria (v2.0 Updated)
-MIN_PRICE: 10  # Minimum ₹10
-MIN_DAILY_VOLUME: 200000  # 200k minimum
-MIN_VOLUME_MULTIPLIER: 1.5  # Volume must be 1.5x average (2.0x for strong)
-STRONG_VOLUME_MULTIPLIER: 2.0  # Strong signal threshold
-
-## Entry Criteria (v2.0)
-ENABLE_EMA_FILTER: true  # Price must be above EMA20
-ENABLE_VWAP_FILTER: true  # Price must be above VWAP
-ENABLE_RSI_FILTER: true  # RSI must be < 70
-ENABLE_CANDLE_FILTER: true  # Must be bullish candle (close > open)
-
-## ATR Settings (v2.0)
-ATR_PERIOD: 14  # Standard ATR period
-ATR_SL_MULTIPLIER: 1.5  # Stop loss = entry - 1.5 * ATR
-ATR_TP_MULTIPLIER: 4.5  # Take profit = entry + 4.5 * ATR
-
-## Trailing Stop (v2.0)
-TRAIL_AT_7_PERCENT: 0.005  # Move SL to breakeven + 0.5%
-TRAIL_AT_11_PERCENT: 0.05  # Move SL to +5%
-TRAIL_AT_15_PERCENT: 0.10  # Move SL to +10%
+## Stock Selection
+MIN_PRICE: 5
+MIN_DAILY_VOLUME: 500000
+MIN_VOLUME_MULTIPLIER: 1.5
 
 ## Bot Settings
-SCAN_INTERVAL_MINUTES: 3  # Scan every 3-5 minutes
-MAX_STOCKS_TO_SCAN: 20  # Scans top 20 stocks
+SCAN_INTERVAL_MINUTES: 5
+MAX_STOCKS_TO_SCAN: 30
 ENABLE_TELEGRAM_ALERTS: true
-PAPER_TRADING: true  # Paper trading mode - no real trades
+PAPER_TRADING: true
 
-## Telegram Alerts
+## Telegram
 TELEGRAM_BOT_TOKEN: "8127398516:AAEGPVkwPWEm3PVDakFOudMu4nfVbHQ42TY"
 TELEGRAM_CHAT_ID: "5964429034"
 
-## GoalTracker Settings
-ENABLE_GOAL_TRACKER: true  # Enable savings goal tracking
-PROFIT_TRANSFER_PERCENT: 30  # 30% of profits go to savings
-
-## Files
-LOG_FILE: "logs/trading.log"
-TRADES_FILE: "learning/trades.md"
+## Compound Mode
+COMPOUND_TARGET: 5000
+SAVINGS_MODE_THRESHOLD: 5000
+MIN_CAPITAL_UTILIZATION: 0.80

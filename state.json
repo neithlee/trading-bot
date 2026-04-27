@@ -1,51 +1,9 @@
 {
-  "capital": 250.0,
-  "positions": [
-    {
-      "symbol": "YESBANK",
-      "entry_price": 19.920000076293945,
-      "quantity": 1,
-      "entry_time": "2026-04-17 09:52",
-      "stop_loss": 19.322400074005127,
-      "take_profit": 22.908000087738035
-    },
-    {
-      "symbol": "YESBANK",
-      "entry_price": 19.920000076293945,
-      "quantity": 1,
-      "entry_time": "2026-04-17 09:53",
-      "stop_loss": 19.322400074005127,
-      "take_profit": 22.908000087738035
-    },
-    {
-      "symbol": "SUZLON",
-      "entry_price": 51.72999954223633,
-      "quantity": 1,
-      "entry_time": "2026-04-17 09:53",
-      "stop_loss": 50.17809955596924,
-      "take_profit": 59.489499473571776
-    },
-    {
-      "symbol": "SUZLON",
-      "entry_price": 51.72999954223633,
-      "quantity": 1,
-      "entry_time": "2026-04-17 09:53",
-      "stop_loss": 50.17809955596924,
-      "take_profit": 59.489499473571776
-    },
-    {
-      "symbol": "RPOWER",
-      "entry_price": 29.360000610351562,
-      "quantity": 1,
-      "entry_time": "2026-04-17 09:53",
-      "stop_loss": 28.479200592041014,
-      "take_profit": 33.764000701904294
-    }
-  ],
-  "trades_today": 0,
+  "capital": 500,
+  "positions": [],
   "daily_pnl": 0,
-  "last_trade_date": null,
-  "trade_log": [],
-  "last_report_date": "2026-04-19",
-  "saved_at": "2026-04-19T08:40:03.973347"
+  "last_report_date": null,
+  "compound_mode": true,
+  "total_profits_reinvested": 0,
+  "saved_at": "2026-04-27T13:30:00.000000"
 }
